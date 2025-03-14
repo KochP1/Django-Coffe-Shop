@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %} Coffe {% endblock %}
+
+{% block content %}
+    <form action="" method="post" class="people-form">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit">Agregar</button>
+    </form>
+{% endblock %}
