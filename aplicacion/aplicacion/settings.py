@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'products',
-    'users'
+    'users',
+    'orders'
 ]
 
 MIDDLEWARE = [
@@ -128,6 +129,7 @@ STATICFILES_DIRS = [
 
 LOGIN_REDIRECT_URL = 'show_product'
 LOGOUT_REDIRECT_URL = 'show_product'
+LOGIN_URL = 'login'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field

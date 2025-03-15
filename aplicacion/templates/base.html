@@ -32,7 +32,7 @@
 
                   <form action="{% url 'logout' %}" method="post">
                     {% csrf_token %}
-                    <button type="submit">
+                    <button type="submit" class="btn btn-primary btn-cerrar-sesion">
                       Cerrar sesión
                     </button>
                   </form>
@@ -42,6 +42,7 @@
                   </li>
               {% endif %}
             </ul>
+            <button class="btn btn-primary btn-pedidos">Pedidos</button>
           </div>
         </div>
       </nav>
