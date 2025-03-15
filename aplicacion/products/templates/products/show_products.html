@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %} Coffe list{% endblock %}
+{% block title %} Coffe list {% endblock %}
 
 {% block content %}
 
@@ -16,7 +16,13 @@
                 <h5 class="card-title">{{product}}</h5>
                 <p class="card-text">{{product.description}}</p>
                 <h6>${{product.price}}</h6>
-                <a href="#" class="btn btn-primary">BUY</a>
+                <form action="{% url 'create_order' %}" method="post">
+                  {% csrf_token %}
+                  <input type="hidden" value="{{product.id}}" name="product">
+                  <button class="btn btn-primary">
+                    Hacer pedido
+                  </button>
+                </form>
               </div>
             </div>
           </div>

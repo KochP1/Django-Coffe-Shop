@@ -1,5 +1,6 @@
 body{
     background-color: #f5eeee;
+    font-family: sans-serif;
 }
 
 *{
@@ -157,8 +158,74 @@ body{
     margin-right: 40px !important;
 }
 
+.btn-pedidos a {
+    text-decoration: none;
+    color: #fff;
+}
+
 .btn-cerrar-sesion{
     width: 130px !important;
+}
+
+.body-pedidos{
+    display: flex;
+    border-bottom: 1px solid #333;
+}
+
+.body-pedidos:first{
+    border-top: 1px solid #333;
+}
+
+.card-pedidos{
+    max-width: 600px;
+    display: flex !important;
+    flex-direction: column !important;
+    margin: auto !important;
+    margin-top: 50px !important;
+}
+
+.btn-checkout{
+    width: 300px !important;
+    display: flex;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.pedidos-info__container{
+    display: flex;
+    justify-content: left;
+    width: 200px;
+}
+
+.pedidos-precio__container{
+    display: flex;
+    justify-content: left;
+    margin-left: 60%;
+}
+
+.pedidos-card-header{
+    padding-left: 20px;
+}
+
+.pedidos-card-header h1{
+    font-weight: 500;
+}
+
+.body-total{
+    display: flex;
+}
+
+.pedidos-total__container{
+    display: flex;
+    justify-content: left;
+    width: 200px;
+}
+
+.pedidos-precio-total__container{
+    display: flex;
+    justify-content: left;
+    margin-left: 60%;
 }
 
 @media (max-width:400px) {

@@ -11,7 +11,7 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="{% url 'show_product' %}">
             <img src="../../../images/pngwing.com.png" alt="coffe shop" width="70px" height="70px" class="logo-img">
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,7 +42,9 @@
                   </li>
               {% endif %}
             </ul>
-            <button class="btn btn-primary btn-pedidos">Pedidos</button>
+            <button class="btn btn-primary btn-pedidos">
+              <a href="{% url 'my_order'%}" class="pedidos-link">Pedidos</a>
+            </button>
           </div>
         </div>
       </nav>

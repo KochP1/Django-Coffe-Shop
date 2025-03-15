@@ -1,14 +1,33 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>Aca apareceran las ordenes</h1>
-    {{order.user.username}}
-    {{order.order_date|date}}
 
-    {% for product_order in order.orderproduct_set.all %}
-        {{ product_order.product.name}}
-        {{product_order.product.price}}
-    {% empty %}
-        no hay items en tu orden
-    {% endfor %}
+    <div class="card card-pedidos">
+        <div class="card-header">
+          {{order.user.username}}
+        </div>
+        <div class="pedidos-card-header">
+          <h1>Tus pedidos</h1>
+          <h5 class="pedidos-fecha">Fecha: {{order.order_date|date}}</h3>
+        </div>
+        {% for product_order in order.orderproduct_set.all %}
+        <div class="card-body body-pedidos">
+          <div class="pedidos-info__container">
+            <h4 class="card-title">{{ product_order.product.name}}</h4>
+          </div>
+          <div class="pedidos-precio__container">
+            <h5 class="pedidos-precio">${{product_order.product.price}}</h3>
+          </div>
+        </div>
+        {% endfor %}
+        <div class="card-body body-total">
+          <div class="pedidos-total__container">
+            <h4 class="card-title">Total</h4>
+          </div>
+          <div class="pedidos-precio-total__container">
+            <h5 class="pedidos-precio">$0.00</h3>
+          </div>
+        </div>
+            <a href="#" class="btn btn-primary btn-checkout">Checkout</a>
+      </div>
 {% endblock %}
